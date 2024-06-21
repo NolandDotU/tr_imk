@@ -12,13 +12,63 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <!-- style buat pop up -->
+    <style>
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            /* black background with low opacity */
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #d4f4d4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .popup img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
     <nav class="bg-primary p-1 flex items-center justify-between">
         <!-- logo -->
         <div class="flex items-center mx-10">
-            <img src="https://s3-alpha-sig.figma.com/img/166f/7148/fa08ae9d1dc1842de8188b596a13bd63?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AW5dQDl5RJFlcp7MhPmhl0AGRORfzJM5IydPL3GM9kxX0aaV5y-rEnecdNtJUDsUW8lUHyJcTGu~ZFz-rKy-qH00IGxT8xfiue7E1UdeueojNjOPtROzBK~dpBEZ3E9c~FuhYgsBP8BQM-fX5ypHu9k7blDCRdC-b2b6qxrw~rIOCTiUWfRDxSKty1RDyVFXDheAMXiYvy7nSn7HWP76i7orA6L0GQeK060MyC64XYG8NbRVD5Hv8bNffg9DN3oBt0RQyqwzfwmeEE4G0k8O9uowkWAmBGG2moQ9QkDURNfKot2AZs7sq9-cYHI7qaF2nxgd6D4Me8M1zSdExClFGA__" alt="" class="w-16 h-auto">
+            <img src="https://s3-alpha-sig.figma.com/img/166f/7148/fa08ae9d1dc1842de8188b596a13bd63?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AW5dQDl5RJFlcp7MhPmhl0AGRORfzJM5IydPL3GM9kxX0aaV5y-rEnecdNtJUDsUW8lUHyJcTGu~ZFz-rKy-qH00IGxT8xfiue7E1UdeueojNjOPtROzBK~dpBEZ3E9c~FuhYgsBP8BQM-fX5ypHu9k7blDCRdC-b2b6qxrw~rIOCTiUWfRDxSKty1RDyVFXDheAMXiYvy7nSn7HWP76i7orA6L0GQeK060MyC64XYG8NbRVD5Hv8bNffg9DN3oBt0RQyqwzfwmeEE4G0k8O9uowkWAmBGG2moQ9QkDURNfKot2AZs7sq9-cYHI7qaF2nxgd6D4Me8M1zSdExClFGA__"
+                alt="" class="w-16 h-auto">
         </div>
 
         <!-- search bar -->
@@ -204,26 +254,84 @@
         <h2 class="text-2xl font-semibold mb-4 text-center">PHILOSOPHY</h2>
         <div class="flex justify-center space-x-8 text-center">
             <div>
-                <div
-                    class="text-4xl bg-green-300 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto">
-                    1</div>
+                <button onclick="showPopup()">
+                    <div
+                        class="text-4xl bg-green-300 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                        1</div>
+                </button>
                 <p class="mt-2 max-w-xs mx-auto">High-Quality Natural Ingredients</p>
             </div>
             <div>
-                <div
-                    class="text-4xl bg-green-300 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto">
-                    2</div>
+                <button onclick="showPopup2()">
+                    <div
+                        class="text-4xl bg-green-300 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                        2</div>
+                </button>
                 <p class="mt-2 max-w-xs mx-auto">Modern Technology</p>
             </div>
             <div>
-                <div
-                    class="text-4xl bg-green-300 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto">
-                    3</div>
+                <button onclick="showPopup3()">
+                    <div
+                        class="text-4xl bg-green-300 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                        3</div>
+                </button>
                 <p class="mt-2 max-w-xs mx-11">Customer Feedback</p>
             </div>
         </div>
     </div>
 
+    <!-- Pop-Up Structure -->
+    <div id="popupContainer" class="popup-container" onclick="hidePopup(event)">
+        <div id="popup" class="popup relative w-full" onclick="event.stopPropagation()">
+            <box-icon class="close-btn" onclick="hidePopup()" name='x' color='#ffffff'></box-icon>
+            <div class="flex justify-center items-center gap-2">
+                <img src="/img/natural.png" class="w-20 h-20 object-scale-down" alt="Popup Image">
+                <img src="/img/alcoholfree.png" class="w-20 h-20 object-scale-down" alt="Popup Image">
+                <img src="/img/halahbrotha.png" class="w-20 h-20 object-scale-down" alt="Popup Image">
+            </div>
+            <div class="flex justify-between mt-4 text-center">
+                <p>NATURAL</p>
+                <p>ALCOHOL FREE</p>
+                <p>HALAL</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupContainer2" class="popup-container" onclick="hidePopup2(event)">
+        <div id="popup" class="popup relative w-full" onclick="hidePopup2">
+            <div class="relative">
+                <img src="https://s3-alpha-sig.figma.com/img/fee5/6bab/75872fa38fc261e6e2a5d22648c52c3a?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Pb1VTzjCR4kLrbXRCSchRShOhx0447fOIRcZa6Z1Ol2LXgg8cjG2UpI2Zm-HLK7RSczyt21JItTWnpyc-8zQ1FXeGl2jAIcgtnbaqTeGVh4KZtzuTeYYfirk1vFgg~qjJmSOUPc3IdZcPVq3To2FA7t-ZvfZ~7221yDd2xKt28D5vmM7ADs4jZjs0KHo~-G~YjNsqmr4u5KWrSINHdNUYWM-0eY96uj7tsfRo6~NKCdvf9HMx7AMNo0pSlumvMdi7fUjXaTgmBpfty0BalB9Ml9q~thEihbNYY8uNkfnDf07L06-mg62puiIL~ONUCaKUcgox7N-FHgmBgaZ6pcqnQ__"
+                    class="w-52 h-80" alt="Popup Image">
+                <box-icon class="close-btn" onclick="hidePopup2()" name='x' color='#ffffff'></box-icon>
+            </div>
+            <div class="mt-4 text-center">
+                <p>Penggunaan teknologi canggih dan inovasi ilmiah untuk menciptakan formula yang lebih efektif dan
+                    efisien. Ini melibatkan bahan aktif canggih seperti peptida dan asam hialuronat dengan teknologi
+                    nano untuk penyerapan lebih dalam, formulasi cerdas yang disesuaikan dengan jenis dan kondisi kulit,
+                    serta pemanfaatan data besar dan kecerdasan buatan untuk personalisasi produk. Selain itu, uji
+                    klinis yang ketat memastikan keamanan dan efikasi produk, sehingga produk skincare modern tidak
+                    hanya fokus pada kecantikan permukaan tetapi juga kesehatan kulit jangka panjang.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupContainer3" class="popup-container" onclick="hidePopup3(event)">
+        <div id="popup" class="popup relative w-full" onclick="hidePopup3">
+            <div class="relative">
+                <img src="https://s3-alpha-sig.figma.com/img/2b92/51c5/333779d2a2e041062930d2a9fd05aa06?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nAJfIbzlEm9fhjhgp811Ixw7LytYSs8-WMwHivTq1pYb8ehdvl0x4Jt~nAQq-0lajtO6uOoU9HTpMOyCsWmdZHPKTJealpVgr2JkAcsHwgZQt5S8n4WvVivx6HoRS2pPLuTyK2kELbRfBCerSTEowC0nRVnkKZ7ImLC8EY~3H9yOzgDq6kYmnfRESNMhsmysP8saRKEMVyQyzGeOY1dpsy1IK8oEAvET9XUbauGwMJnhAIsI6VqgUtgJkEaVmyevA0ONCHwmgsN3yAvbDBlSgM3K0tc9F6yZlr73dZzsXmtNwNvBhF0bTIrClTuz3diKsYRSgTVNXdk4iv5ylhB2lg__"
+                    class="w-52 h-80" alt="Popup Image">
+                <box-icon class="close-btn" onclick="hidePopup3()" name='x' color='#ffffff'></box-icon>
+            </div>
+            <div class="mt-4 text-center">
+                <p>Penggunaan teknologi canggih dan inovasi ilmiah untuk menciptakan formula yang lebih efektif dan
+                    efisien. Ini melibatkan bahan aktif canggih seperti peptida dan asam hialuronat dengan teknologi
+                    nano untuk penyerapan lebih dalam, formulasi cerdas yang disesuaikan dengan jenis dan kondisi kulit,
+                    serta pemanfaatan data besar dan kecerdasan buatan untuk personalisasi produk. Selain itu, uji
+                    klinis yang ketat memastikan keamanan dan efikasi produk, sehingga produk skincare modern tidak
+                    hanya fokus pada kecantikan permukaan tetapi juga kesehatan kulit jangka panjang.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- New Product Section -->
     <div class="container mx-auto px-4 mt-8">
@@ -250,9 +358,72 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-green-300 p-8 mt-8 text-center">
-        <p class="text-white">CEFN. All rights reserved.</p>
+    <footer class="bg-green-700 text-white mt-10">
+        <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between">
+            <!-- Brand and Social Links -->
+            <div class="mb-6 md:mb-0">
+                <h2 class="text-2xl font-bold">CEIN.</h2>
+                <p class="mt-4">FOLLOW US</p>
+                <div class="flex mt-2 space-x-3">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"
+                            class="w-6 h-6"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"
+                            class="w-6 h-6"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"
+                            class="w-6 h-6"></a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold">Products</h3>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">Inner Care</a></li>
+                        <li><a href="#" class="hover:underline">Skin Care</a></li>
+                        <li><a href="#" class="hover:underline">Scalp Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Guides</h3>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">News</a></li>
+                        <li><a href="#" class="hover:underline">Vision</a></li>
+                        <li><a href="#" class="hover:underline">Q&A</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Service</h3>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">About Concierge</a></li>
+                        <li><a href="#" class="hover:underline">Online Consultation</a></li>
+                        <li><a href="#" class="hover:underline">Market</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Contact</h3>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Links -->
+        <div class="bg-green-800 py-4">
+            <div class="container mx-auto px-4 text-center text-sm">
+                <p class="mb-4">CEIN. 2019 KINS All rights reserved.</p>
+                <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-6">
+                    <a href="#" class="hover:underline">Company Profile</a>
+                    <a href="#" class="hover:underline">Privacy policy</a>
+                    <a href="#" class="hover:underline">Cancellation policy</a>
+                    <a href="#" class="hover:underline">Terms of service</a>
+                    <a href="#" class="hover:underline">Refund/Return Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
 
     <!-- script dropdown -->
     <script>
@@ -273,6 +444,39 @@
                 }
             });
         });
+    </script>
+
+    <!-- pop up script -->
+    <script>
+        function showPopup() {
+            document.getElementById('popupContainer').style.display = 'flex';
+        }
+
+        function showPopup2() {
+            document.getElementById('popupContainer2').style.display = 'flex';
+        }
+
+        function showPopup3() {
+            document.getElementById('popupContainer3').style.display = 'flex';
+        }
+
+        function hidePopup(event) {
+            if (event.target.id === 'popupContainer' || event.target.className === 'close-btn') {
+                document.getElementById('popupContainer').style.display = 'none';
+            }
+        }
+
+        function hidePopup2(event) {
+            if (event.target.id === 'popupContainer2' || event.target.className === 'close-btn') {
+                document.getElementById('popupContainer2').style.display = 'none';
+            }
+        }
+
+        function hidePopup3(event) {
+            if (event.target.id === 'popupContainer3' || event.target.className === 'close-btn') {
+                document.getElementById('popupContainer3').style.display = 'none';
+            }
+        }
     </script>
 </body>
 
