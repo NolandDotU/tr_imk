@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Cart Shop</title>
+    <title>Skincare Products</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="output.css" />
@@ -64,7 +64,12 @@
     </style>
   </head>
 
-  <body class="bg-gray-100">
+  <body
+    class="bg-[url('https://s3-alpha-sig.figma.com/img/c51e/9043/f3797927c60b3248c3723f14526075a3?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Tlvsfyws-A7SLQYj6Wrqbd0N~yGXaj8W1fP2wtHEFzBlXpcRVHwYER7EItV3DclHo715KmGv8yyIdUA-wAHaGBQl~KsF44vUsM0IUjsrQqRgZBdIi7ofsod85taDpwhjn-qLIe2Rr3BWbKIVgF5GPMoEms5ojrvrF-dMPPFeweUg2S~J0do4utELH29~rH18cCXCTdtFd6bMryNG7EwFqKCIhnpE4sYcpF0h6-UHuzhNIgpNSTjfC980dVvNqY1PJOgXvbRlxT3h~kfGhd6BE62IAsku~qiVVp7B0-P6VKlxrTBLYCmLWkVjrQYz1LG3jCXr~b0HhC9qaQpWfj3T4Q__')] bg-cover">
+    <img
+      src="https://s3-alpha-sig.figma.com/img/166f/7148/fa08ae9d1dc1842de8188b596a13bd63?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AW5dQDl5RJFlcp7MhPmhl0AGRORfzJM5IydPL3GM9kxX0aaV5y-rEnecdNtJUDsUW8lUHyJcTGu~ZFz-rKy-qH00IGxT8xfiue7E1UdeueojNjOPtROzBK~dpBEZ3E9c~FuhYgsBP8BQM-fX5ypHu9k7blDCRdC-b2b6qxrw~rIOCTiUWfRDxSKty1RDyVFXDheAMXiYvy7nSn7HWP76i7orA6L0GQeK060MyC64XYG8NbRVD5Hv8bNffg9DN3oBt0RQyqwzfwmeEE4G0k8O9uowkWAmBGG2moQ9QkDURNfKot2AZs7sq9-cYHI7qaF2nxgd6D4Me8M1zSdExClFGA__"
+      class="absolute w-80 mx-16 translate-y-44" />
+    <!-- Navbar -->
     <nav class="bg-primary p-1 flex items-center justify-between">
       <!-- logo -->
       <div class="flex items-center mx-10">
@@ -100,7 +105,7 @@
           <a href="#" class="text-black">SHOP</a>
           <box-icon name="chevron-down"></box-icon>
           <div
-            class="absolute hidden group-hover:block bg-primary shadow-lg mt-10 w-[180px]">
+            class="absolute hidden group-hover:block bg-primary shadow-lg mt-10">
             <a href="#" class="flex px-10 py-2 text-white hover:bg-gray-200"
               >Skincare</a
             >
@@ -118,79 +123,67 @@
         <a href="#" class="text-black">PHILOSOPHY</a>
 
         <div class="flex items-center space-x-4">
-          <a href="./cart.html" class="text-white">
+          <a href="#" class="text-white">
             <box-icon name="basket"></box-icon>
           </a>
           <a href="#" class="text-white">
             <box-icon name="home"></box-icon>
           </a>
-          <a href="./login.html" class="text-white">
+          <a href="#" class="text-white">
             <box-icon name="user"></box-icon>
           </a>
         </div>
       </div>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container mx-auto mt-8 p-4">
-      <h1 class="text-3xl font-bold mb-6">Shopping Cart</h1>
-
-      <!-- Cart Items -->
-      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
-        <div class="grid grid-cols-5 gap-4 items-center">
-          <!-- Item 1 -->
-          <a href="#"
-            ><img
-              src="../img/boodycare1/foto3.png"
-              class="w-auto h-[165px]"
-              alt="produk"
-          /></a>
-          <div class="col-span-2">
-            <h2 class="text-lg font-bold"></h2>
-            <p class="text-gray-500">CEIN Soothing Lavender Shower Gel</p>
+    <!-- Main Content -->
+    <div class="container mx-auto px-10 py-12 flex flex-col items-end">
+      <!-- Registration Form -->
+      <div class="bg-white shadow-md rounded p-8 max-w-md w-full">
+        <div
+          class="flex justify-between border-black border-t border-b pt-4 pb-4 mb-4">
+          <a href="./login.html" class="text-gray-700 font-semibold mx-16"
+            >Login</a
+          >
+          <hr
+            class="w-full -rotate-[50deg] border-b translate-y-3 border-black" />
+          <button class="text-green-700 font-semibold mx-16">Register</button>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <button
+            class="bg-blue-600 text-white py-2 rounded flex items-center justify-center space-x-2">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+              class="w-5 h-5" />
+            <span>Continue with Facebook</span>
+          </button>
+          <button
+            class="bg-red-600 text-white py-2 rounded flex items-center justify-center space-x-2">
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/google-logo.png"
+              class="w-5 h-5" />
+            <span>Continue with Google</span>
+          </button>
+          <div class="text-center text-gray-500">or, register with e-mail</div>
+          <div class="flex flex-col space-y-2">
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="border border-gray-300 rounded py-2 px-4" />
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="border border-gray-300 rounded py-2 px-4" />
           </div>
-          <div class="col-span-1">
-            <p class="text-lg font-bold">$25.00</p>
-          </div>
-          <div class="col-span-1 flex items-center space-x-2">
-            <button class="bg-gray-200 p-2 rounded-lg">-</button>
-            <span>1</span>
-            <button class="bg-gray-200 p-2 rounded-lg">+</button>
-          </div>
+          <a href="./" class="bg-myGreen text-white py-2 text-center rounded"
+            >Register</a
+          >
         </div>
-      </div>
-
-      <!-- Cart Summary -->
-      <div class="bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-2xl font-bold mb-4">Summary</h2>
-        <div class="flex justify-between mb-2">
-          <span>Subtotal</span>
-          <span>$25.00</span>
-        </div>
-        <div class="flex justify-between mb-4">
-          <span>Shipping</span>
-          <span>$5.00</span>
-        </div>
-        <div class="flex justify-between font-bold text-lg">
-          <span>Total</span>
-          <span>$30.00</span>
-        </div>
-        <button class="w-full bg-green-600 text-white py-3 mt-4 rounded-lg">
-          Proceed to Checkout
-        </button>
-      </div>
-    </div>
-
-    <!-- Popup -->
-    <div id="popup-container" class="popup-container flex">
-      <div class="popup">
-        <button class="close-btn" onclick="closePopup()">×</button>
-        <img src="https://via.placeholder.com/400" alt="Popup Image" />
       </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-myGreen text-white mt-10">
+    <footer class="bg-primary text-white">
       <div
         class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between">
         <!-- Brand and Social Links -->
@@ -257,7 +250,7 @@
       </div>
 
       <!-- Bottom Links -->
-      <div class="bg-myGreen py-4">
+      <div class="bg-primary py-4">
         <div class="container mx-auto px-4 text-center text-sm">
           <p class="mb-4">CEIN. 2019 KINS All rights reserved.</p>
           <div
@@ -271,71 +264,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- script dropdown -->
-    <script>
-      // Optional: Add JavaScript to handle dropdown toggle on click (for mobile support or click-to-toggle behavior)
-      document.addEventListener("DOMContentLoaded", () => {
-        const shopLink = document.querySelector(".group > a");
-        const dropdownMenu = document.querySelector(".group > .absolute");
-
-        shopLink.addEventListener("click", (e) => {
-          e.preventDefault();
-          dropdownMenu.classList.toggle("hidden");
-        });
-
-        // Hide dropdown when clicking outside
-        document.addEventListener("click", (e) => {
-          if (
-            !shopLink.contains(e.target) &&
-            !dropdownMenu.contains(e.target)
-          ) {
-            dropdownMenu.classList.add("hidden");
-          }
-        });
-      });
-    </script>
-
-    <!-- pop up script -->
-    <script>
-      function showPopup() {
-        document.getElementById("popupContainer").style.display = "flex";
-      }
-
-      function showPopup2() {
-        document.getElementById("popupContainer2").style.display = "flex";
-      }
-
-      function showPopup3() {
-        document.getElementById("popupContainer3").style.display = "flex";
-      }
-
-      function hidePopup(event) {
-        if (
-          event.target.id === "popupContainer" ||
-          event.target.className === "close-btn"
-        ) {
-          document.getElementById("popupContainer").style.display = "none";
-        }
-      }
-
-      function hidePopup2(event) {
-        if (
-          event.target.id === "popupContainer2" ||
-          event.target.className === "close-btn"
-        ) {
-          document.getElementById("popupContainer2").style.display = "none";
-        }
-      }
-
-      function hidePopup3(event) {
-        if (
-          event.target.id === "popupContainer3" ||
-          event.target.className === "close-btn"
-        ) {
-          document.getElementById("popupContainer3").style.display = "none";
-        }
-      }
-    </script>
   </body>
 </html>
