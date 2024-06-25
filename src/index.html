@@ -353,11 +353,11 @@
     </div>
 
     <!-- Pop-Up Structure -->
-    <div id="popupContainer" class="popup-container" onclick="hidePopup(event)">
-      <div
-        id="popup"
-        class="popup relative w-full"
-        onclick="event.stopPropagation()">
+    <div 
+      id="popupContainer" 
+      class="popup-container" 
+      onclick="hidePopup(event)">
+      <div id="popup" class="popup relative w-full" onclick="hidePopup2">
         <box-icon
           class="close-btn"
           onclick="hidePopup()"
@@ -378,9 +378,15 @@
             alt="Popup Image" />
         </div>
         <div class="flex justify-between mt-4 text-center">
-          <p>NATURAL</p>
-          <p>ALCOHOL FREE</p>
-          <p>HALAL</p>
+          <div class="ml-14">
+            <p>NATURAL</p>
+          </div>
+          <div class="mr-5">
+            <p>ALCOHOL FREE</p>
+          </div>
+          <div class="mr-16">
+            <p>HALAL</p>
+          </div>
         </div>
       </div>
     </div>
