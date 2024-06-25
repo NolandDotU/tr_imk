@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cart Shop</title>
+    <title>Bundling Sale</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="output.css">
@@ -111,57 +111,61 @@
         </div>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container mx-auto mt-8 p-4">
-        <h1 class="text-3xl font-bold mb-6">Shopping Cart</h1>
+    <!-- Main Content -->
+    <main class="mx-10 my-10">
+        <section class="mb-10">
+            <img src="../img/bundling/background.png" alt="Main Banner" class="w-full h-auto rounded-lg shadow-lg">
+        </section>
 
-        <!-- Cart Items -->
-        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
-            <div class="grid grid-cols-5 gap-4 items-center">
-                <!-- Item 1 -->
-                <a href="#"><img src="img/Sooting Lavender.png" alt="produk"></a>
-                <div class="col-span-2">
-                    <h2 class="text-lg font-bold">Product Name</h2>
-                    <p class="text-gray-500">Product Description</p>
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-4">CATEGORY</h2>
+            <div class="flex space-x-4">
+                <button class="px-4 py-2 bg-green-200 rounded-full">SHOWER GEL</button>
+                <button class="px-4 py-2 bg-green-200 rounded-full">BODY SCRUB</button>
+                <button class="px-4 py-2 bg-green-200 rounded-full">BODY BUTTER</button>
+                <button class="px-4 py-2 bg-green-200 rounded-full">BODY LOTION</button>
+                <button class="px-4 py-2 bg-green-200 rounded-full">DEODORANT</button>
+                <button class="px-4 py-2 bg-green-200 rounded-full">BODY MIST</button>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="../img/bundling/foto1.png" alt="Product Image" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold">Rp 27.000</h3>
+                    <p class="text-gray-700">CEIN Strength & Shine Biotin Shampoo</p>
+                    <a href="#" class="text-green-600 mt-2 block">VIEW MORE</a>
                 </div>
-                <div class="col-span-1">
-                    <p class="text-lg font-bold">$25.00</p>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="../img/bundling/foto2.png" alt="Product Image" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold">Rp 34.000</h3>
+                    <p class="text-gray-700">CEIN Moisture Lock Argan Oil Shampoo</p>
+                    <a href="#" class="text-green-600 mt-2 block">VIEW MORE</a>
                 </div>
-                <div class="col-span-1 flex items-center space-x-2">
-                    <button class="bg-gray-200 p-2 rounded-lg">-</button>
-                    <span>1</span>
-                    <button class="bg-gray-200 p-2 rounded-lg">+</button>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="../img/bundling/foto3.png" alt="Product Image" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold">Rp 30.000</h3>
+                    <p class="text-gray-700">CEIN Volume Boost Keratin Shampoo</p>
+                    <a href="#" class="text-green-600 mt-2 block">VIEW MORE</a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="../img/bundling/foto4.png" alt="Product Image" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold">Rp 229.000</h3>
+                    <p class="text-gray-700">CEIN Nourish & Restore Bundle</p>
+                    <a href="#" class="text-green-600 mt-2 block">VIEW MORE</a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="../img/bundling/foto5.png" alt="Product Image" class="w-full h-auto mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold">Rp 120.000</h3>
+                    <p class="text-gray-700">CEIN Soothing Sensations Bundle</p>
+                    <a href="#" class="text-green-600 mt-2 block">VIEW MORE</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Cart Summary -->
-        <div class="bg-white shadow-md rounded-lg p-6">
-            <h2 class="text-2xl font-bold mb-4">Summary</h2>
-            <div class="flex justify-between mb-2">
-                <span>Subtotal</span>
-                <span>$25.00</span>
-            </div>
-            <div class="flex justify-between mb-4">
-                <span>Shipping</span>
-                <span>$5.00</span>
-            </div>
-            <div class="flex justify-between font-bold text-lg">
-                <span>Total</span>
-                <span>$30.00</span>
-            </div>
-            <button class="w-full bg-green-600 text-white py-3 mt-4 rounded-lg">Proceed to Checkout</button>
-        </div>
-    </div>
-
-    <!-- Popup -->
-    <div id="popup-container" class="popup-container flex">
-        <div class="popup">
-            <button class="close-btn" onclick="closePopup()">×</button>
-            <img src="https://via.placeholder.com/400" alt="Popup Image">
-        </div>
-    </div>
-
+        </section>
+    </main>
+    
     <!-- Footer -->
     <footer class="bg-green-700 text-white mt-10">
         <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between">
