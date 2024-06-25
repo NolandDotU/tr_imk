@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1612,6 +1612,21 @@ html {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+.bg-green-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
+}
+
+.bg-myBrown {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 70 50 / var(--tw-bg-opacity));
+}
+
 .bg-myGreen {
   --tw-bg-opacity: 1;
   background-color: rgb(113 131 85 / var(--tw-bg-opacity));
@@ -1640,16 +1655,6 @@ html {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(133 77 14 / var(--tw-bg-opacity));
-}
-
-.bg-myBrown {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 70 50 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'https\:\/\/s3-alpha-sig\.figma\.com\/img\/c51e\/9043\/f3797927c60b3248c3723f14526075a3\?Expires\=1719792000\&Key-Pair-Id\=APKAQ4GOSFWCVNEHN3O4\&Signature\=Tlvsfyws-A7SLQYj6Wrqbd0N\~yGXaj8W1fP2wtHEFzBlXpcRVHwYER7EItV3DclHo715KmGv8yyIdUA-wAHaGBQl\~KsF44vUsM0IUjsrQqRgZBdIi7ofsod85taDpwhjn-qLIe2Rr3BWbKIVgF5GPMoEms5ojrvrF-dMPPFeweUg2S\~J0do4utELH29\~rH18cCXCTdtFd6bMryNG7EwFqKCIhnpE4sYcpF0h6-UHuzhNIgpNSTjfC980dVvNqY1PJOgXvbRlxT3h\~kfGhd6BE62IAsku\~qiVVp7B0-P6VKlxrTBLYCmLWkVjrQYz1LG3jCXr\~b0HhC9qaQpWfj3T4Q__\'\)\] {
