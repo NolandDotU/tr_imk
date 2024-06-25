@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cart Shop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <!-- style buat pop up -->
+    <style>
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            /* black background with low opacity */
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #d4f4d4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .popup img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-primary p-1 flex items-center justify-between">
+        <!-- logo -->
+        <div class="flex items-center mx-10">
+            <img src="https://s3-alpha-sig.figma.com/img/166f/7148/fa08ae9d1dc1842de8188b596a13bd63?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AW5dQDl5RJFlcp7MhPmhl0AGRORfzJM5IydPL3GM9kxX0aaV5y-rEnecdNtJUDsUW8lUHyJcTGu~ZFz-rKy-qH00IGxT8xfiue7E1UdeueojNjOPtROzBK~dpBEZ3E9c~FuhYgsBP8BQM-fX5ypHu9k7blDCRdC-b2b6qxrw~rIOCTiUWfRDxSKty1RDyVFXDheAMXiYvy7nSn7HWP76i7orA6L0GQeK060MyC64XYG8NbRVD5Hv8bNffg9DN3oBt0RQyqwzfwmeEE4G0k8O9uowkWAmBGG2moQ9QkDURNfKot2AZs7sq9-cYHI7qaF2nxgd6D4Me8M1zSdExClFGA__"
+                alt="" class="w-16 h-auto">
+        </div>
+
+        <!-- search bar -->
+        <div class="flex-grow mx-20 relative">
+            <input type="text" placeholder="Search"
+                class="w-96 px-4 py-2 pl-10 rounded-full bg-green-100 border border-green-400 focus:outline-none focus:ring-2 focus:ring-green-600">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-4.35-4.35m1.4-5.15A7.5 7.5 0 1 1 3 10.5a7.5 7.5 0 0 1 15 0z" />
+            </svg>
+        </div>
+
+        <!-- links -->
+        <div class="flex items-center space-x-10 z-50">
+            <div class="flex relative group">
+                <a href="#" class="text-black">SHOP</a>
+                <box-icon name='chevron-down'></box-icon>
+                <div class="absolute hidden group-hover:block bg-primary shadow-lg mt-10">
+                    <a href="#" class="flex px-10 py-2 text-white hover:bg-gray-200">Skincare</a>
+                    <a href="#" class="flex px-10 py-2 text-white hover:bg-gray-200">Body Care</a>
+                    <a href="#" class="flex px-10 py-2 text-white hover:bg-gray-200">Hair Care</a>
+                    <a href="#" class="flex px-10 py-2 text-white hover:bg-gray-200">Bundling</a>
+                </div>
+            </div>
+            <a href="#" class="text-black">PHILOSOPHY</a>
+
+            <div class="flex items-center space-x-4">
+                <a href="./cart.html" class="text-white">
+                    <box-icon name='basket'></box-icon>
+                </a>
+                <a href="#" class="text-white">
+                    <box-icon name='home'></box-icon>
+                </a>
+                <a href="./login.html" class="text-white">
+                    <box-icon name='user'></box-icon>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mx-auto mt-8 p-4">
+        <h1 class="text-3xl font-bold mb-6">Shopping Cart</h1>
+
+        <!-- Cart Items -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <div class="grid grid-cols-5 gap-4 items-center">
+                <!-- Item 1 -->
+                <a href="#"><img src="img/Sooting Lavender.png" alt="produk"></a>
+                <div class="col-span-2">
+                    <h2 class="text-lg font-bold">Product Name</h2>
+                    <p class="text-gray-500">Product Description</p>
+                </div>
+                <div class="col-span-1">
+                    <p class="text-lg font-bold">$25.00</p>
+                </div>
+                <div class="col-span-1 flex items-center space-x-2">
+                    <button class="bg-gray-200 p-2 rounded-lg">-</button>
+                    <span>1</span>
+                    <button class="bg-gray-200 p-2 rounded-lg">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Summary</h2>
+            <div class="flex justify-between mb-2">
+                <span>Subtotal</span>
+                <span>$25.00</span>
+            </div>
+            <div class="flex justify-between mb-4">
+                <span>Shipping</span>
+                <span>$5.00</span>
+            </div>
+            <div class="flex justify-between font-bold text-lg">
+                <span>Total</span>
+                <span>$30.00</span>
+            </div>
+            <button class="w-full bg-green-600 text-white py-3 mt-4 rounded-lg">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup-container" class="popup-container flex">
+        <div class="popup">
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <img src="https://via.placeholder.com/400" alt="Popup Image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white mt-10">
+        <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between">
+            <!-- Brand and Social Links -->
+            <div class="mb-6 md:mb-0">
+                <h2 class="text-2xl font-bold">CEIN.</h2>
+                <p class="mt-4">FOLLOW US</p>
+                <div class="flex mt-2 space-x-3">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"
+                            class="w-6 h-6"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"
+                            class="w-6 h-6"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"
+                            class="w-6 h-6"></a>
+                </div>
+            </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup-container').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-container').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
