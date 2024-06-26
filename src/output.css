@@ -1623,6 +1623,11 @@ html {
   height: 2.5rem;
 }
 
+.size-9 {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -2772,6 +2777,11 @@ html {
 
 .shadow-emerald-950 {
   --tw-shadow-color: #022c22;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-base-content {
+  --tw-shadow-color: var(--fallback-bc,oklch(var(--bc)/1));
   --tw-shadow: var(--tw-shadow-colored);
 }
 
