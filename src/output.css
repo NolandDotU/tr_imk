@@ -1431,14 +1431,6 @@ html {
   height: 100%;
 }
 
-.h-\[300px\] {
-  height: 300px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
 .h-\[350px\] {
   height: 350px;
 }
@@ -1806,6 +1798,11 @@ html {
   background-color: rgb(113 131 85 / var(--tw-bg-opacity));
 }
 
+.bg-myLime {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 245 219 / var(--tw-bg-opacity));
+}
+
 .bg-neutral {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
@@ -1829,11 +1826,6 @@ html {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-myLime {
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 245 219 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -1987,6 +1979,10 @@ html {
   font-size: 24px;
 }
 
+.text-\[44px\] {
+  font-size: 44px;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1999,14 +1995,6 @@ html {
 
 .text-\[34px\] {
   font-size: 34px;
-}
-
-.text-\[54px\] {
-  font-size: 54px;
-}
-
-.text-\[44px\] {
-  font-size: 44px;
 }
 
 .font-bold {
