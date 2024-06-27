@@ -7,6 +7,7 @@ module.exports = {
         primary: "#97A97C",
         myGreen: "#718355",
         myBrown: "#524632",
+        myLime: "#E9F5DB",
       },
       backgroundImage: {
         "login-img":
