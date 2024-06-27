@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1392,16 +1392,16 @@ html {
   height: 165px;
 }
 
+.h-\[492px\] {
+  height: 492px;
+}
+
 .h-auto {
   height: auto;
 }
 
 .h-full {
   height: 100%;
-}
-
-.h-\[492px\] {
-  height: 492px;
 }
 
 .min-h-\[492px\] {
@@ -1476,16 +1476,16 @@ html {
   width: 422px;
 }
 
+.w-\[625px\] {
+  width: 625px;
+}
+
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[625px\] {
-  width: 625px;
 }
 
 .max-w-4xl {
@@ -1498,10 +1498,6 @@ html {
 
 .max-w-\[429px\] {
   max-width: 429px;
-}
-
-.max-w-\[625px\] {
-  max-width: 625px;
 }
 
 .max-w-full {
